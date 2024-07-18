@@ -1,0 +1,129 @@
+/* styles.css */
+body {
+    background-image: url(assets/pelito.jpg);
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    background-size: cover; /* Hacer que la imagen cubra todo el fondo */
+    background-position: center; /* Centrar la imagen en el fondo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 4vw; /* Utilizando vw para tamaño de fuente */
+    margin-bottom: 2vw; /* Margen relativo */
+    border: 0.3vw solid #ff9900; /* Grosor de borde relativo */
+    padding: 1vw;
+    border-radius: 1vw;
+}
+
+
+#ruleta {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    position: relative;
+    margin: 0 auto;
+    background: linear-gradient(to right, #ff9900, #ffcc66);
+    /* Colores degradados para la ruleta */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Sombra para dar profundidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opcion {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3498db;
+    /* Azul */
+    border-radius: 50%;
+    position: absolute;
+    transform-origin: 50% 100px;
+    transition: transform 1s;
+}
+
+.opcion.selected {
+    transform: rotate(720deg) translate(100px) rotate(-720deg);
+    /* Agregar efecto de giro para la opción seleccionada */
+}
+
+#opcion1 {
+    transform: rotate(0deg) translate(100px) rotate(-0deg);
+}
+
+#opcion2 {
+    transform: rotate(60deg) translate(100px) rotate(-60deg);
+}
+
+#opcion3 {
+    transform: rotate(120deg) translate(100px) rotate(-120deg);
+}
+
+#opcion4 {
+    transform: rotate(180deg) translate(100px) rotate(-180deg);
+}
+
+#opcion5 {
+    transform: rotate(240deg) translate(100px) rotate(-240deg);
+}
+
+#opcion6 {
+    transform: rotate(300deg) translate(100px) rotate(-300deg);
+}
+
+#botonGirar {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#resultado {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: white;
+}
+
+
+/* Responsive*/ 
+
+@media only screen and (max-width: 768px) {
+    /* Estilos específicos para pantallas de hasta 768px de ancho */
+    h1 {
+        font-size: 6vw;
+        margin-bottom: 3vw;
+        border: 0.5vw solid #ff9900;
+        border-radius: 2vw;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Estilos específicos para pantallas de hasta 480px de ancho */
+    h1 {
+        font-size: 8vw;
+        margin-bottom: 4vw;
+        border: 0.7vw solid #ff9900;
+        border-radius: 3vw;
+    }
+}
